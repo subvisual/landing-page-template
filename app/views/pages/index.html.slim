@@ -1,3 +1,20 @@
-h1 Call to action
+.row
+  div class="small-12 columns"
+    h1 Call to action
 
-
+.row
+  div class="small-8 small-offset-4 columns"
+    = form_for @user, url: confirm_path do |user|
+      .row
+        div class="small-3 columns"
+          = user.label :name, for: 'right-label', class: 'right inline'
+        div class="small-9 columns"
+          = user.text_field :name, placeholder: 'Your name'
+      .row
+        div class="small-3 columns"
+          = user.label :email, for: 'right-label', class: 'right inline'
+        div class="small-9 columns"
+          = user.text_field :email, placeholder: 'Your email'
+      .row
+        div class="small-offset-3 small-9 columns"
+          = user.submit "Send", class: 'button'

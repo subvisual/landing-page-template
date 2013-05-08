@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def index
-  end
-  def confirm
+    @user = User.new
   end
 end

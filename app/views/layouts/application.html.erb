@@ -10,19 +10,12 @@
   <body>
     <%= render 'layouts/facebook_sdk' if defined?(FACEBOOK_APP_ID) %>
 
-    <nav class="top-bar">
-      <ul class=title-area">
-        <li class="name"></li>
-      </ul>
-    </nav>
-
-    <header>
-    </header>
-
     <%= yield %>
 
-    <footer>
-    © GB 2013. All Rights Reserved.
+    <footer class="row">
+    <div class="small-12 columns">
+      © GB 2013. All Rights Reserved.
+    </div>
     </footer>
 
   </body>
