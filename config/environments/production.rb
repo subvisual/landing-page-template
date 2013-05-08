@@ -1,5 +1,14 @@
 LandingPageTemplate::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587,
+    :enable_starttls_auto => true,
+    :user_name => ENV["MANDRILL_USERNAME"],
+    :password  => ENV["MANDRILL_PASSWORD"],
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :domain => 'yourdomain.com'
+  }
 
   # Code is not reloaded between requests
   config.cache_classes = true
