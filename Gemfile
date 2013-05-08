@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'fb-channel-file'
 gem 'jquery-rails'
 gem 'rails', '3.2.13'
 gem 'slim-rails'

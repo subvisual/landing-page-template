@@ -1,5 +1,7 @@
 # define custom variables for mixpanel and mailchimp
 
+# facebook
+#FACEBOOK_APP_ID = '#facebook'
 
 # mixpanel variables
 MIXPANEL_SIGNUP_EVENT = 'signup'
