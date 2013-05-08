@@ -1,4 +1,5 @@
 LandingPageTemplate::Application.routes.draw do
-  match 'home' => 'pages#index', via: 'get'
+  match 'index' => 'pages#index', via: 'get'
+  match 'confirm' => 'pages#confirm', via: 'post'
   root to: 'pages#index'
 end

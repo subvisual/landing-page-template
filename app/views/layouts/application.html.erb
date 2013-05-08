@@ -5,11 +5,25 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    <%= render 'layouts/meta' %>
   </head>
   <body>
-    <%= render 'layouts/facebook' if defined?(FACEBOOK_APP_ID) %>
+    <%= render 'layouts/facebook_sdk' if defined?(FACEBOOK_APP_ID) %>
+
+    <nav class="top-bar">
+      <ul class=title-area">
+        <li class="name"></li>
+      </ul>
+    </nav>
+
+    <header>
+    </header>
 
     <%= yield %>
+
+    <footer>
+    © GB 2013. All Rights Reserved.
+    </footer>
 
   </body>
 </html>
