@@ -13,3 +13,10 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore zeus
+zeus.json
+custom_plan.rb
+
+# Envoirment variables file
+.env

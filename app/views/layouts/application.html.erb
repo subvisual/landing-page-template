@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LandingPageTemplate</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= t 'layout.title' %></title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/meta' %>
+  </head>
+  <body>
+    <%= render 'layouts/facebook_sdk' unless ENV['FACEBOOK_APP_ID'].nil? %>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+    <footer class="row">
+    <div class="small-12 columns">
+      © GB <%= ENV['YEAR'] %>. <%= t 'layout.rights' %>
+    </div>
+    </footer>
+
+  </body>
 </html>

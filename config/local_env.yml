@@ -1,0 +1,23 @@
+# application variables
+HOST_WITH_PORT: http://localhost:3000
+YEAR: 2013
+
+# meta information
+SITE_NAME: Dummy Name
+SITE_DESCRIPTION: Dummy Description
+TITLE: Dummy Title
+
+# When set to false the sdk is not included. 
+# When chaning the value remove the tmp folder
+#FACEBOOK_APP_ID: false
+
+# mixpanel variables
+MIXPANEL_SIGNUP_EVENT: signup
+MIXPANEL_TOKEN: mixpanel
+
+# email configuration
+EMAIL_ADDRESS: smtp.mandrillapp.com
+EMAIL_DOMAIN: yourdomain.com
+EMAIL_PORT: 587
+MANDRILL_USERNAME: username
+MANDRILL_PASSWORD: password
