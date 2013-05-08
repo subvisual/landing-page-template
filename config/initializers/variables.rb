@@ -10,3 +10,4 @@ if Rails.env == 'development' || Rails.env == 'test'
 else 
   MIXPANEL_TOKEN = '#production'
 end
+
