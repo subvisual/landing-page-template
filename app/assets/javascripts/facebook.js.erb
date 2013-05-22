@@ -1,8 +1,8 @@
-<% if FACEBOOK_APP_ID %>
+<% unless ENV['FACEBOOK_APP_ID'].nil? %>
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '<%= FACEBOOK_APP_ID %>',                // App ID from the app dashboard
-    channelUrl : '<%= HOST_WITH_PORT %>channel.html',        // Channel file for x-domain comms
+    appId      : "<%= ENV['FACEBOOK_APP_ID'] %>",                // App ID from the app dashboard
+    channelUrl : "<%= ENV['HOST_WITH_PORT'] %>channel.html",        // Channel file for x-domain comms
     status     : true,                                    // Check Facebook Login status
     xfbml      : true                                     // Look for social plugins on the page
   });

@@ -1,20 +1,6 @@
-# application variables
-HOST_WITH_PORT = 'http://localhost:3000'
-YEAR = '2013'
-
-# meta information
-TITLE = "Dummy Title"
-SITE_NAME = "Dummy Name"
-SITE_DESCRIPTION = "Dummy Description"
-
-# When set to false the sdk is not included. When chaning the value remove the tmp folder
-FACEBOOK_APP_ID = false
-
-# mixpanel variables
-MIXPANEL_SIGNUP_EVENT = 'signup'
-if Rails.env == 'development' || Rails.env == 'test'
-  MIXPANEL_TOKEN = '#development'
-else 
-  MIXPANEL_TOKEN = '#production'
+LandingPageTemplate::Application.config.before_configuration do
+  env_file = File.join(Rails.root, 'config', 'local_env.yml')
+  YAML.load(File.open(env_file)).each do |key, value|
+    ENV[key.to_s] = value.to_s
+  end if File.exists?(env_file)
 end
-

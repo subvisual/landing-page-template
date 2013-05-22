@@ -8,13 +8,13 @@
     <%= render 'layouts/meta' %>
   </head>
   <body>
-    <%= render 'layouts/facebook_sdk' if FACEBOOK_APP_ID %>
+    <%= render 'layouts/facebook_sdk' unless ENV['FACEBOOK_APP_ID'].nil? %>
 
     <%= yield %>
 
     <footer class="row">
     <div class="small-12 columns">
-      © GB <%= YEAR %>. <%= t 'layout.rights' %>
+      © GB <%= ENV['YEAR'] %>. <%= t 'layout.rights' %>
     </div>
     </footer>
 

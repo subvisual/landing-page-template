@@ -1,12 +1,12 @@
-<meta name="description" content="<%= SITE_DESCRIPTION %>">
+<meta name="description" content="<%= ENV['SITE_DESCRIPTION'] %>">
 
 <!-- facebook meta -->
-<meta content="<%= HOST_WITH_PORT %>" property="og:url" />
-<meta content="<%= HOST_WITH_PORT %><%= image_path 'fb_profile.png' %>" property="og:image" />
-<meta content="<%= TITLE %>" property="og:title" />
+<meta content="<%= ENV['HOST_WITH_PORT'] %>" property="og:url" />
+<meta content="<%= ENV['HOST_WITH_PORT'] %><%= image_path 'fb_profile.png' %>" property="og:image" />
+<meta content="<%= ENV['TITLE'] %>" property="og:title" />
 <meta content="website" property="og:type" />
-<meta content="<%= SITE_NAME %>" property="og:site_name" />
-<meta content="<%= SITE_DESCRIPTION %>" property="og:description" />
+<meta content="<%= ENV['SITE_NAME'] %>" property="og:site_name" />
+<meta content="<%= ENV['SITE_DESCRIPTION'] %>" property="og:description" />
 
 <meta property="fb:admins" content="#admin_id" />
 <meta property="fb:app_id" content="#app_id"/>
