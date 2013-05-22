@@ -1,5 +1,6 @@
 LandingPageTemplate::Application.routes.draw do
-  match 'index' => 'pages#index', via: 'get'
-  match 'confirm' => 'users#create', via: 'post'
+  get 'index' => 'pages#index'
+  post 'confirm' => 'users#create'
+
   root to: 'pages#index'
 end

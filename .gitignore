@@ -17,3 +17,6 @@
 # Ignore zeus
 zeus.json
 custom_plan.rb
+
+# Envoirment variables file
+.env

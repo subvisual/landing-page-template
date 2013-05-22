@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LandingPageTemplate</title>
+    <title><%= t 'layout.title' %></title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/meta' %>
   </head>
   <body>
-    <%= render 'layouts/facebook_sdk' if defined?(FACEBOOK_APP_ID) %>
+    <%= render 'layouts/facebook_sdk' if FACEBOOK_APP_ID %>
 
     <%= yield %>
 
     <footer class="row">
     <div class="small-12 columns">
-      © GB 2013. All Rights Reserved.
+      © GB <%= YEAR %>. <%= t 'layout.rights' %>
     </div>
     </footer>
 

@@ -51,6 +51,9 @@ GEM
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     debug_inspector (0.0.2)
+    dotenv (0.7.0)
+    dotenv-rails (0.7.0)
+      dotenv (= 0.7.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -144,6 +147,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 3.2.1)
   compass-rails
+  dotenv-rails
   fb-channel-file
   jquery-rails
   pry

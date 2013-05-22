@@ -2,4 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  layout:
+    title: 'Dummy Title'
+    rights: 'All Rights Reserved'
+  user:
+    name_label: 'Name'
+    name_placeholder: 'Your name'
+    email_label: 'Email'
+    email_placeholder: 'Your email'
+    submit: "Submit"

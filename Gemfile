@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails'
 gem 'fb-channel-file'
 gem 'jquery-rails'
 gem 'rails', '~> 3.2.13'

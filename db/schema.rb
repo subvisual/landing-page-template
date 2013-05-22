@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130522091725) do
+ActiveRecord::Schema.define(:version => 20130508165557) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.string   "email"
+    t.string   "email",      :null => false
+    t.string   "token",      :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "token"
   end
 
 end
