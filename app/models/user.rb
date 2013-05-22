@@ -1,9 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :token
 
-  validates_uniqueness_of :email, :token
-  validates_presence_of :email, :token
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+  validates :email, uniqueness: true, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+  validates :token, uniqueness: true, presence: true
 
   before_validation :generate_token
 
