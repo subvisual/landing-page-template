@@ -32,6 +32,8 @@ GEM
     better_errors (0.8.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     builder (3.0.4)
     chunky_png (1.2.8)
     coderay (1.0.9)
@@ -48,6 +50,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -138,13 +141,14 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  binding_of_caller
   coffee-rails (~> 3.2.1)
   compass-rails
   fb-channel-file
   jquery-rails
   pry
   pry-rails
-  rails (= 3.2.13)
+  rails (~> 3.2.13)
   sass-rails (~> 3.2.3)
   slim-rails
   sqlite3
