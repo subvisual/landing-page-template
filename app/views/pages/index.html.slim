@@ -4,17 +4,17 @@
 
 .row
   div class="small-8 small-offset-4 columns"
-    = form_for @user, url: confirm_path do |user|
+    = form_tag confirm_path do
       .row
         div class="small-3 columns"
-          = user.label :name, for: 'right-label', class: 'right inline'
+          = label_tag :name, nil, for: 'right-label', class: 'right inline'
         div class="small-9 columns"
-          = user.text_field :name, placeholder: 'Your name'
+          = text_field_tag :name, nil, placeholder: 'Your name'
       .row
         div class="small-3 columns"
-          = user.label :email, for: 'right-label', class: 'right inline'
+          = label_tag :email, nil, for: 'right-label', class: 'right inline'
         div class="small-9 columns"
-          = user.text_field :email, placeholder: 'Your email'
+          = text_field_tag :email, nil,  placeholder: 'Your email'
       .row
         div class="small-offset-3 small-9 columns"
-          = user.submit "Send", class: 'button'
+          = submit_tag "Send", class: 'button'

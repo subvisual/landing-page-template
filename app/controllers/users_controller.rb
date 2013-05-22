@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   def create
-    u = User.create params[:user]
+    @user = User.new name: params[:name], email: params[:email]
+    if @user.save
+
+    else
+
+    end
   end
 end
