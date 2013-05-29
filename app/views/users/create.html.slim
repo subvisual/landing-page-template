@@ -7,9 +7,9 @@
     input type="text" value="#{ referral_url @user.token }"
 .row
   div class="small-6 columns"
-    p Share on facebook
+    a href="#" class="facebook-share-button" Post to facebook
   div class="small-6 columns"
-    p Share on twitter
+    a href="http://twitter.com/share?text=#{ENV['TWITTER_TEXT'].gsub('%20',' ')}&url=#{ENV['TWITTER_LINK']}" Share on twitter
 
 .row
   div class="small-12 columns"
