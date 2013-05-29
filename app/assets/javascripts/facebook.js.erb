@@ -18,10 +18,8 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 function postToFacebook(url) {
-  // calling the API ...
   var obj = {
     method: 'feed',
-    //redirect_uri: "<%= ENV['HOST_WITH_PORT'] %>",
     link: url,
     picture: 'http://fbrell.com/f8.jpg',
     name: "<%= ENV['FACEBOOK_NAME'] %>",
