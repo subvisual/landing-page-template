@@ -4,13 +4,10 @@
 
 .row
   div class="small-12 columns"
-    input type="text" value="#{ referral_url @user.token }"
+    input type="text" value="#{ referral_url @user.token }" 
 .row
   div class="small-6 columns"
-    a href="#" class="facebook-share-button" Post to facebook
+    a href="#" onclick="postToFacebook('#{referral_url @user.token}')" #{(t 'user.facebook')} 
   div class="small-6 columns"
-    a href="http://twitter.com/share?text=#{ENV['TWITTER_TEXT'].gsub('%20',' ')}&url=#{ENV['TWITTER_LINK']}" Share on twitter
+    a href="http://twitter.com/share?text=#{ENV['TWITTER_TEXT'].gsub('%20',' ')}&url=#{referral_url @user.token}" #{(t 'user.twitter')} 
 
-.row
-  div class="small-12 columns"
-    b Spread the word

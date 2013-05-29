@@ -8,16 +8,14 @@ SITE_DESCRIPTION: Dummy Description
 TITLE: Dummy Title
 
 # When set to false the sdk is not included. 
-# When chaning the value remove the tmp folder
+# When chaning the id value remove the tmp folder
 FACEBOOK_APP_ID: 345095095547911
 FACEBOOK_NAME: Dummy Name
 FACEBOOK_CAPTION: Help us spread the word
 FACEBOOK_DESCRIPTION: About stuff and more
 
-
-TWITTER_TEXT: Dummy Text
 # Seems like twitter onlye share links that start with http://www
-TWITTER_LINK: http://www.somehting.com
+TWITTER_TEXT: Dummy Text
 
 # mixpanel variables
 MIXPANEL_SIGNUP_EVENT: signup

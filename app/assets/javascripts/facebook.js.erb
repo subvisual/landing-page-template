@@ -17,26 +17,19 @@ window.fbAsyncInit = function() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-$(document).ready(function() {
-  $('a.facebook-share-button').click(function() {
-    console.log("Clicked facebook share");
-    // calling the API ...
-    var obj = {
-      method: 'feed',
-      //redirect_uri: 'http://localhost:3000',
-      link: "<%= ENV['HOST_WITH_PORT'] %>",
-      picture: 'http://fbrell.com/f8.jpg',
-      name: "<%= ENV['FACEBOOK_NAME'] %>",
-      caption: "<%= ENV['FACEBOOK_CAPTION'] %>",
-      description: "<%= ENV['FACEBOOK_DESCRIPTION'] %>"
-    };
+function postToFacebook(url) {
+  // calling the API ...
+  var obj = {
+    method: 'feed',
+    //redirect_uri: "<%= ENV['HOST_WITH_PORT'] %>",
+    link: url,
+    picture: 'http://fbrell.com/f8.jpg',
+    name: "<%= ENV['FACEBOOK_NAME'] %>",
+    caption: "<%= ENV['FACEBOOK_CAPTION'] %>",
+    description: "<%= ENV['FACEBOOK_DESCRIPTION'] %>"
+  };
 
-    function callback(response) {
-      document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-    }
-
-    FB.ui(obj, callback);
-  });
-});
+  FB.ui(obj);
+}
 
 <% end %>
