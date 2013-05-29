@@ -5,9 +5,19 @@ en:
   layout:
     rights: 'All Rights Reserved'
     title: 'Dummy Title'
+  referral:
+    title: 'Help us spread the word!'
   user:
-    email_label: 'Email'
-    email_placeholder: 'Your email'
-    name_label: 'Name'
-    name_placeholder: 'Your name'
-    submit: "Submit"
+    form:
+      label:
+        email: 'Email'
+        name: 'Name'
+      placeholder:
+        email: 'Your email'
+        name: 'Your name'
+      submit: "Submit"
+    share:
+      facebook: 'Post to Facebook'
+      twitter: 'Share on Twitter'
+
+
