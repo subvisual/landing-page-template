@@ -1,10 +1,7 @@
 class UsersController < ApplicationController
   def create
-    @user = User.new name: params[:name], email: params[:email]
-    if @user.save
-
-    else
-
+    @user = User.find_or_create_by_name_and_email name: params[:name], email: params[:email]
+    if params[:token]
     end
   end
 end

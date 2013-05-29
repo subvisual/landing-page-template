@@ -19,3 +19,5 @@
       .row
         div class="small-offset-3 small-9 columns"
           = submit_tag (t 'user.submit'), class: 'button'
+
+      = hidden_field_tag :token, @token if @token
