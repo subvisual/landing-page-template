@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(:version => 20130529102600) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.string   "email",                  :null => false
-    t.string   "token",                  :null => false
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
-    t.integer  "referral_views"
-    t.integer  "referral_subscriptions"
+    t.string   "email",                                 :null => false
+    t.string   "token",                                 :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.integer  "referral_views",         :default => 0, :null => false
+    t.integer  "referral_subscriptions", :default => 0, :null => false
   end
 
 end
