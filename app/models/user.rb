@@ -18,8 +18,17 @@ class User < ActiveRecord::Base
     self
   end
 
+  def increment_views!
+    self.increment_views.save
+  end
+
   def increment_subscriptions
     self.referral_subscriptions += 1
     self
   end
+  
+  def increment_subscriptions!
+    self.increment_subscriptions.save
+  end
+
 end
