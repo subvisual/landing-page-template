@@ -8,16 +8,16 @@
     = form_tag confirm_path do
       .row
         div class="small-3 columns"
-          = label_tag (t 'user.name_label'), nil, for: 'right-label', class: 'right inline'
+          = label_tag (t 'user.form.label.name'), nil, for: 'right-label', class: 'right inline'
         div class="small-9 columns"
-          = text_field_tag :name, nil, placeholder: (t 'user.name_placeholder')
+          = text_field_tag :name, nil, placeholder: (t 'user.form.placeholder.name')
       .row
         div class="small-3 columns"
-          = label_tag (t 'user.email_label'), nil, for: 'right-label', class: 'right inline'
+          = label_tag (t 'user.form.label.email'), nil, for: 'right-label', class: 'right inline'
         div class="small-9 columns"
-          = text_field_tag :email, nil,  placeholder: (t 'user.email_placeholder')
+          = text_field_tag :email, nil,  placeholder: (t 'user.form.placeholder.email')
       .row
         div class="small-offset-3 small-9 columns"
-          = submit_tag (t 'user.submit'), class: 'button'
+          = submit_tag (t 'user.form.submit'), class: 'button'
 
       = hidden_field_tag :token, @token if @token

@@ -8,7 +8,7 @@
 
 .row
   div class="small-6 columns"
-    a href="#" onclick="postToFacebook('#{referral_url @user.token}')" #{(t 'user.facebook')} 
+    a href="#" onclick="postToFacebook('#{referral_url @user.token}')" #{(t 'user.share.facebook')} 
   div class="small-6 columns"
-    a href="http://twitter.com/share?text=#{ENV['TWITTER_TEXT'].gsub('%20',' ')}&url=#{referral_url @user.token}" #{(t 'user.twitter')} 
+    a href="http://twitter.com/share?text=#{ENV['TWITTER_TEXT'].gsub('%20',' ')}&url=#{referral_url @user.token}" #{(t 'user.share.twitter')} 
 
