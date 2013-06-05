@@ -2,34 +2,38 @@ require 'spec_helper'
 
 describe UsersController do
 
-  it 'creates a new user' do
-    user = FactoryGirl.build :user
+  it 'saves a new user' do
+    user = build :user
+    User.stub_chain(:where, :first_or_initialize).and_return(user)
+
+    user.should_receive(:save)
 
     get :create, name: user.name, email: user.email
-
-    User.find_by_email(user.email).should be_true
   end
 
   it 'doesnt update referral subscriptions counter when user already exists' do
-    user = FactoryGirl.create :user
-    referral = FactoryGirl.create :user
+    user = create :user
+    referral = create :user
+    User.stub_chain(:where, :first_or_initialize).and_return(user)
 
-    get :create, user.attributes
+    referral.should_not_receive(:increment!)
 
-    User.find(referral).referral_subscriptions.should eql referral.referral_subscriptions
+    get :create, name: user.name, email: user.email, token: referral.token
   end
 
   it 'updates referral subscriptions counter' do
-    referral =  FactoryGirl.create :user
-    user = FactoryGirl.build :user
+    referral = create :user
+    user = build :user
+    controller.stub(:user).and_return(user)
+    controller.stub(:existing_email?).and_return(false)
+
+    User.should_receive(:increment_subscriptions).and_return(true)
 
     get :create, name: user.name, email: user.email, token: referral.token
-
-    User.find(referral).referral_subscriptions.should eql (referral.referral_subscriptions + 1)
   end
 
   it 'it ignores the token if it is invalid' do
-    user = FactoryGirl.build :user
+    user = build :user
 
     get :create, name: user.name, email: user.email, token: 'aa'
 
