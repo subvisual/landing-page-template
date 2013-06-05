@@ -1,5 +1,5 @@
 LandingPageTemplate::Application.routes.draw do
-  get 'home' => 'pages#index'
+  get 'homepage' => 'pages#index'
   post 'confirm' => 'users#create'
   
   get 'referral/:token' => 'pages#referral', as: 'referral'
