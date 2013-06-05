@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if user.save
       increment_referral
     else
-      redirect_to index_path
+      redirect_to home_path
     end
   end
 
