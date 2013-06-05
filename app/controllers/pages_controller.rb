@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def referral
-    User.find_by_token(params[:token]).try(:increment_views!)
+    User.find_by_token(params[:token]).try(:increment!, :referral_views)
     @token = params[:token]
     render :index
   end

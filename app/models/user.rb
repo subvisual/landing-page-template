@@ -13,22 +13,4 @@ class User < ActiveRecord::Base
     self.token = SecureRandom.uuid
   end
 
-  def increment_views
-    self.referral_views += 1
-    self
-  end
-
-  def increment_views!
-    self.increment_views.save
-  end
-
-  def increment_subscriptions
-    self.referral_subscriptions += 1
-    self
-  end
-  
-  def increment_subscriptions!
-    self.increment_subscriptions.save
-  end
-
 end

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'capistrano'
 gem 'dotenv-rails'
 gem 'fb-channel-file'
 gem 'jquery-rails'
